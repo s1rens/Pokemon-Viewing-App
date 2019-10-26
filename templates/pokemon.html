@@ -1,0 +1,14 @@
+<h1>
+  Name: {{pokemon.name}}
+</h1>
+<img src="{{pokemon.sprites.front_default}}">
+<p>
+  Type: {% for type in pokemon.types %}
+    {{type.type.name}}
+  {% endfor %}
+</p>
+<ul>
+  {% for move in pokemon.abilities %}
+  <li>{{move.ability.name}}</li>
+  {% endfor %}
+</ul>
